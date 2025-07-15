@@ -32,12 +32,45 @@ modules:
       - kitty-terminfo
       - kitty-shell-integration
       - tuxedo-drivers-kmod
+      - zoxide
+      - direnv
+      - waybar
+      - openvpn
+      - gopass
+      - emacs
+      - emacsclient
+      - isync
+      - maildir-utils
+      - printer-driver-brlaser
+      - clipman
+      - distrobox
+      - fzf
+      - qutebrowser
+      - foot
+      - syncthing
+      - nextcloud-client
+      - pavucontrol
+      - pinentry
+      - rlwrap
+      - vdirsyncer
+      - wireguard-tools
+      - zathura
+      - wtype
     remove:
       # example: removing firefox (in favor of the flatpak)
       # "firefox" is the main package, "firefox-langpacks" is a dependency
       - firefox
       - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
-
+  - type: script
+    snippets:
+      - "echo $PATH"
+      - "curl -o /tmp/eza.tar.gz -L https://github.com/eza-community/eza/releases/download/v0.22.1/eza_x86_64-unknown-linux-gnu.tar.gz"
+      - "tar xvf /tmp/eza.tar.gz -C /tmp && ls -l /tmp && mv /tmp/eza /usr/bin/"
+      - "curl -o /tmp/bat.tar.gz -L https://github.com/sharkdp/bat/releases/download/v0.25.0/bat-v0.25.0-x86_64-unknown-linux-gnu.tar.gz"
+      - "tar --strip-components=1 -C /tmp -xvf /tmp/bat.tar.gz"
+      - "ls -lha /tmp && mv /tmp/bat /usr/bin/bat"
+      - "mv /tmp/autocomplete/bat.bash /usr/share/bash-completion/completions/bat.bash"
+      - "bash < <(curl -s https://raw.githubusercontent.com/babashka/babashka/master/install)"
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
     system:
@@ -62,6 +95,9 @@ modules:
         - Terminus
         - JetBrainsMono
         - NerdFontsSymbolsOnly
+        - IosevkaTermSlab
+        - Lekton
+        - VictorMono
       google-fonts:
         - Roboto
         - Open Sans
