@@ -26,6 +26,7 @@ modules:
       - niri
       - micro
       - starship
+      - foot
       - kitty
       - kitty-doc
       - kitty-kitten
