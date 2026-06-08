@@ -34,6 +34,7 @@ modules:
       - tuxedo-drivers-kmod
       - zoxide
       - direnv
+      - nushell
       - waybar
       - openvpn
       - gopass
@@ -45,16 +46,16 @@ modules:
       - clipman
       - distrobox
       - fzf
-      - qutebrowser
-      - foot
       - syncthing
       - nextcloud-client
       - pavucontrol
       - pinentry
+      - eza
       - rlwrap
       - vdirsyncer
       - wireguard-tools
       - zathura
+      - qemu-system-x86
       - wtype
       - dmenu
     remove:
@@ -65,8 +66,6 @@ modules:
   - type: script
     snippets:
       - "echo $PATH"
-      - "curl -o /tmp/eza.tar.gz -L https://github.com/eza-community/eza/releases/download/v0.22.1/eza_x86_64-unknown-linux-gnu.tar.gz"
-      - "tar xvf /tmp/eza.tar.gz -C /tmp && ls -l /tmp && mv /tmp/eza /usr/bin/"
       - "curl -o /tmp/bat.tar.gz -L https://github.com/sharkdp/bat/releases/download/v0.25.0/bat-v0.25.0-x86_64-unknown-linux-gnu.tar.gz"
       - "tar --strip-components=1 -C /tmp -xvf /tmp/bat.tar.gz"
       - "ls -lha /tmp && mv /tmp/bat /usr/bin/bat"
@@ -98,5 +97,7 @@ modules:
       google-fonts:
         - Roboto
         - Open Sans
-
+      url-fonts:
+        - name: MapleMono
+          url: https://github.com/subframe7536/maple-font/releases/download/v7.9/MapleMono-NF-unhinted.zip
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
