@@ -52,6 +52,7 @@ modules:
       - pinentry
       - eza
       - rlwrap
+      - git-lfs
       - vdirsyncer
       - wireguard-tools
       - zathura
