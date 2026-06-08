@@ -79,6 +79,7 @@ modules:
           - org.mozilla.firefox
           - org.gnome.Loupe
           - io.gitlab.librewolf-community
+          - com.orcaslicer.OrcaSlicer
   - type: chezmoi
     repository: "https://github.com/bascht/dotfiles-public" # my dotfiles repo
     all-users: false
