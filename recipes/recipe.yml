@@ -41,6 +41,7 @@ modules:
       - emacs
       - emacsclient
       - isync
+      - cliphist
       - maildir-utils
       - printer-driver-brlaser
       - clipman
