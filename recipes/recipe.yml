@@ -67,6 +67,10 @@ modules:
     remove:
       - firefox
       - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
+  - type: dnf
+    install:
+      packages:
+        - "https://github.com/gopasspw/git-credential-gopass/releases/download/v1.16.1/git-credential-gopass_1.16.1_linux_amd64.rpm"
   - type: default-flatpaks
     configurations:
       - scope: system
