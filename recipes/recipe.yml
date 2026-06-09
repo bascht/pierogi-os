@@ -55,6 +55,7 @@ modules:
       - pavucontrol
       - pinentry
       - pinentry-gnome3
+      - gum
       - eza
       - rlwrap
       - git-lfs
