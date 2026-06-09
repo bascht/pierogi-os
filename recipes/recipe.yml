@@ -6,7 +6,7 @@ name: pierogi-os
 description: This is my personal OS image.
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/silverblue-main
+base-image: ghcr.io/ublue-os/base-main
 image-version: 44 # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
@@ -25,6 +25,7 @@ modules:
     install:
       - niri
       - micro
+      - j4-dmenu-desktop
       - starship
       - foot
       - kitty
@@ -61,19 +62,10 @@ modules:
       - qemu-system-x86
       - wtype
       - dmenu
+      - bat
     remove:
-      # example: removing firefox (in favor of the flatpak)
-      # "firefox" is the main package, "firefox-langpacks" is a dependency
       - firefox
       - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
-  - type: script
-    snippets:
-      - "echo $PATH"
-      - "curl -o /tmp/bat.tar.gz -L https://github.com/sharkdp/bat/releases/download/v0.25.0/bat-v0.25.0-x86_64-unknown-linux-gnu.tar.gz"
-      - "tar --strip-components=1 -C /tmp -xvf /tmp/bat.tar.gz"
-      - "ls -lha /tmp && mv /tmp/bat /usr/bin/bat"
-      - "mv /tmp/autocomplete/bat.bash /usr/share/bash-completion/completions/bat.bash"
-      - "bash < <(curl -s https://raw.githubusercontent.com/babashka/babashka/master/install)"
   - type: default-flatpaks
     configurations:
       - scope: system
@@ -82,6 +74,10 @@ modules:
           - org.gnome.Loupe
           - io.gitlab.librewolf-community
           - com.orcaslicer.OrcaSlicer
+          - io.m51.Gelly
+          - im.riot.Riot
+          - org.gnome.Fractal
+          - org.signal.Signal
   - type: chezmoi
     repository: "https://github.com/bascht/dotfiles-public" # my dotfiles repo
     all-users: false
