@@ -54,6 +54,7 @@ modules:
       - nextcloud-client
       - pavucontrol
       - pinentry
+      - pinentry-gnome3
       - eza
       - rlwrap
       - git-lfs
