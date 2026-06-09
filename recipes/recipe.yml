@@ -35,6 +35,7 @@ modules:
       - kitty-shell-integration
       - tuxedo-drivers-kmod
       - zoxide
+      - notmuch
       - direnv
       - nushell
       - waybar
