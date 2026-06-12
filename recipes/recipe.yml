@@ -59,6 +59,7 @@ modules:
       - gum
       - eza
       - wl-kbptr
+      - rbw
       - rlwrap
       - git-lfs
       - vdirsyncer
