@@ -58,6 +58,7 @@ modules:
       - pinentry-gnome3
       - gum
       - eza
+      - wl-kbptr
       - rlwrap
       - git-lfs
       - vdirsyncer
