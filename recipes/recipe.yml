@@ -60,6 +60,7 @@ modules:
       - eza
       - wl-kbptr
       - rbw
+      - msmtp
       - rlwrap
       - git-lfs
       - vdirsyncer
